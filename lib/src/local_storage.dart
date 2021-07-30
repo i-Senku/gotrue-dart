@@ -13,8 +13,8 @@ class GoTrueLocalStorage{
     _storage = const FlutterSecureStorage();
   }
 
-  Future<void> saveSession(Session? session) async{
-    _storage.write(key: _key, value: session?.toJson().toString());
+  Future<void> saveSession(Session session) async{
+    _storage.write(key: _key, value: session.toJson().toString());
   }
 
   Future<void> deleteSession() async{
