@@ -50,7 +50,11 @@ class GoTrueClient {
   }
 
   /// Returns the session data, if there is an active session.
-  Future<Session?> session() {
+  Session? session() {
+    return currentSession;
+  }
+
+  Future<Session?> localSession() async{
     return GoTrueLocalStorage.shared.getSession();
   }
 
